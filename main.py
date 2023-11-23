@@ -5,7 +5,7 @@ import pandas as pd
 with open('123Done.txt', 'r', encoding = 'Latin-1') as myfile:
     data = myfile.read()
 
-    match = re.findall(r'('To:(.*?)Subject:',fin)', data)
+    match = re.findall(r'[\w\.-]+@[\w\.-]', data)
     match = set(match)
     match = list(match)
 
